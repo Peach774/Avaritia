@@ -4,4 +4,4 @@ This is hopefully going to fix nbt integration from the newest version and maybe
 This is licensed under MIT
 https://opensource.org/licenses/MIT
 
-Original Credit to SpitefulFox, Fork Credit to Morpheus1011
+Original Credit to SpitefulFox, Fork Credit to Morpheus1101

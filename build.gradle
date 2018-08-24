@@ -135,17 +135,17 @@ uploadArchives {
                         name project.archivesBaseName
                         packaging 'jar'
                         description 'Avaritia'
-                        url 'https://github.com/Morpheus1101/Avaritia'
+                        url: https://github.com/Peach774/Avaritia
 
                         scm {
-                            url 'https://github.com/Morpheus1101/Avaritia'
-                            connection 'scm:git:git://github.com/Morpheus1101/Avaritia.git'
-                            developerConnection 'scm:git:git@github.com:Morpheus1101/Avaritia.git'
+                            url 'https://github.com/Peach774/Avaritia'
+                            connection 'scm:git:git://github.com/Peach774/Avaritia.git'
+                            developerConnection 'scm:git:git@github.com:Peach774/Avaritia.git'
                         }
 
                         issueManagement {
                             system 'github'
-                            url 'https://github.com/Morpheus1101/Avaritia/issues'
+                            url 'https://github.com/Peach774/Avaritia/issues'
                         }
 
                         licenses {
@@ -158,24 +158,31 @@ uploadArchives {
 
                         developers {
                             developer {
+                                id 'Peach774'
+                                name 'Peach774'
+                                roles {
+                                    role 'New-Fork-developer'
+                                }
+                            }
+                            developer {
                                 id 'Morpheus1101'
                                 name 'Morpheus1101'
                                 roles {
-                                    role 'developer'
+                                    role 'OG-Fork-developer'
                                 }
                             }
                             developer {
                                 id 'covers1624'
                                 name 'covers1624'
                                 roles {
-                                    role 'developer'
+                                    role 'OG-Fork-developer'
                                 }
                             }
                             developer {
                                 id 'brandon3055'
                                 name 'brandon3055'
                                 roles {
-                                    role 'developer'
+                                    role 'OG-Fork-developer'
                                 }
                             }
                             developer {

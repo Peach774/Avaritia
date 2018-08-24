@@ -14,6 +14,7 @@ import net.minecraftforge.common.crafting.JsonContext;
 
 import javax.annotation.Nonnull;
 import java.util.Iterator;
+import java.util.List;
 
 /**
  * Created by covers1624 on 9/10/2017.
@@ -56,18 +57,10 @@ public class ExtremeShapelessRecipe extends ExtremeRecipeBase {
                 Iterator<Ingredient> req = required.iterator();
 
                 while (req.hasNext()) {
-                    Ingredient ing = req.next();
-                    if (ing.apply(slot)) {
-                        for (ItemStack stack : ing.getMatchingStacks()) {
-                            if (ItemStack.areItemStackTagsEqual(stack, slot)) {
-                                inRecipe = true;
-                                req.remove();
-                                break;
-                            }
-                        }
-                        if (inRecipe) {
-                            break;
-                        }
+                    if (req.next().apply(slot)) {
+                        inRecipe = true;
+                        req.remove();
+                        break;
                     }
                 }
 

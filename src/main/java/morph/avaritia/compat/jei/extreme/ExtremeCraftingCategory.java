@@ -6,6 +6,7 @@ import mezz.jei.api.gui.IDrawable;
 import mezz.jei.api.gui.IGuiItemStackGroup;
 import mezz.jei.api.gui.IRecipeLayout;
 import mezz.jei.api.ingredients.IIngredients;
+import mezz.jei.api.ingredients.VanillaTypes;
 import mezz.jei.api.recipe.IRecipeCategory;
 import morph.avaritia.Avaritia;
 import morph.avaritia.compat.jei.AvaritiaJEIPlugin;
@@ -66,7 +67,7 @@ public class ExtremeCraftingCategory implements IRecipeCategory<ExtremeRecipeWra
                 guiItemStacks.init(index, true, (x * 18) + 1, (y * 18) + 1);
             }
         }
-        List<List<ItemStack>> inputs = ingredients.getInputs(ItemStack.class);
+        List<List<ItemStack>> inputs = ingredients.getInputs(VanillaTypes.ITEM);
         if (wrapper.recipe.isShapedRecipe()) {
             try {
                 int width = wrapper.recipe.getWidth();
@@ -82,7 +83,7 @@ public class ExtremeCraftingCategory implements IRecipeCategory<ExtremeRecipeWra
                             }
                         }
                     }
-                    ingredients.setInputLists(ItemStack.class, newInputs);
+                    ingredients.setInputLists(VanillaTypes.ITEM, newInputs);
                 }
             } catch (Exception e) {
                 e.printStackTrace();

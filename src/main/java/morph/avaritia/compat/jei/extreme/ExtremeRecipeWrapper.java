@@ -1,6 +1,7 @@
 package morph.avaritia.compat.jei.extreme;
 
 import mezz.jei.api.ingredients.IIngredients;
+import mezz.jei.api.ingredients.VanillaTypes;
 import mezz.jei.api.recipe.IRecipeWrapper;
 import morph.avaritia.compat.jei.AvaritiaJEIPlugin;
 import morph.avaritia.recipe.extreme.IExtremeRecipe;
@@ -21,8 +22,8 @@ public class ExtremeRecipeWrapper implements IRecipeWrapper {
 
     @Override
     public void getIngredients(IIngredients ingredients) {
-        ingredients.setInputLists(ItemStack.class, getRecipeInputs(recipe));
-        ingredients.setOutput(ItemStack.class, getRecipeOutput(recipe));
+        ingredients.setInputLists(VanillaTypes.ITEM, getRecipeInputs(recipe));
+        ingredients.setOutput(VanillaTypes.ITEM, getRecipeOutput(recipe));
     }
 
     protected List<List<ItemStack>> getRecipeInputs(IExtremeRecipe recipe) {

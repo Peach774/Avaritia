@@ -135,7 +135,7 @@ uploadArchives {
                         name project.archivesBaseName
                         packaging 'jar'
                         description 'Avaritia'
-                        url: https://github.com/Peach774/Avaritia
+                        url 'https://github.com/Peach774/Avaritia'
 
                         scm {
                             url 'https://github.com/Peach774/Avaritia'

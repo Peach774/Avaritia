@@ -49,7 +49,7 @@ public class ExtremeCrafting {
         int x = 0;
         for (IIngredient[] row : ingredients) {
             for (IIngredient ing : row) {
-                primer.input.set(x++, Ingredient.fromStacks(CraftTweakerMC.getItemStack(ing)));
+                primer.input.set(x++, CrTIngredient.getIngredient(ing));
             }
         }
         IExtremeRecipe recipe = new ExtremeShapedRecipe(CraftTweakerMC.getItemStack(output), primer);
@@ -137,7 +137,7 @@ public class ExtremeCrafting {
     private static NonNullList<Ingredient> getIngredients(IIngredient[] input) {
         NonNullList<Ingredient> ingredients = NonNullList.create();
         for (IIngredient ing : input) {
-            ingredients.add(Ingredient.fromStacks(CraftTweakerMC.getItemStack(ing)));
+            ingredients.add(CrTIngredient.getIngredient(ing));
         }
         return ingredients;
     }
